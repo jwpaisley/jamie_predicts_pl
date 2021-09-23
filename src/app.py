@@ -6,13 +6,13 @@ from team import Team
 from image import build_image
 from twitter import TwitterClient
 from sms import SMSClient
-from db import DatabaseConnector
+# from db import DatabaseConnector
 from prediction import Prediction
 from utils import headers
 
 twitter_client = TwitterClient()
 sms_client = SMSClient()
-db_connector = DatabaseConnector()
+# db_connector = DatabaseConnector()
 
 load_dotenv()
 dirname = os.path.dirname(__file__)
@@ -75,7 +75,7 @@ def make_prediction(fixture):
 
     kickoff = datetime.strptime(fixture['event_date'], "%Y-%m-%dT%H:%M:%S+00:00")
 
-    db_connector.post_prediction_to_db(home_team, away_team, pred_home_goals, pred_away_goals, home_poisson, away_poisson, kickoff)
+    # db_connector.post_prediction_to_db(home_team, away_team, pred_home_goals, pred_away_goals, home_poisson, away_poisson, kickoff)
 
     return Prediction(home_team, away_team, pred_home_goals, pred_away_goals, home_poisson, away_poisson, kickoff)
 
