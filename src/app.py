@@ -7,7 +7,7 @@ from twitter import TwitterClient
 from sms import SMSClient
 # from db import DatabaseConnector
 from prediction import Prediction
-# from results import build_results
+from results import build_results
 from utils import headers
 import json
 
@@ -82,7 +82,7 @@ def make_prediction(fixture):
 
 def tweet_prediction(prediction):
     delay = (prediction.kickoff - timedelta(minutes=30) - datetime.utcnow()).total_seconds()
-    time.sleep(max(delay, 0))
+    # time.sleep(max(delay, 0))
     build_image(prediction.home_team, prediction.away_team, prediction.home_poisson, prediction.away_poisson)
     media = twitter_client.upload_image(os.path.join(dirname, 'img/prediction.png'))
     twitter_client.tweet(prediction.to_tweet_string(), media)
@@ -97,7 +97,7 @@ def expected_value(mu):
         poisson_list.append(P)
     return (poisson_list.index(max(poisson_list)), poisson_list)
 
-today = datetime.utcnow().strftime("%Y-%m-%d")
+today = "2022-8-5" # datetime.utcnow().strftime("%Y-%m-%d")
 league_results = get_results_for_league(LEAGUE_ID_PREV)
 league_averages = get_league_averages(league_results)
 fixtures = get_fixtures_by_day(LEAGUE_ID, today)
