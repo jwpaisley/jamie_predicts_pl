@@ -1,6 +1,5 @@
-import requests, time, os, math, threading
-from datetime import datetime, timedelta, timezone, time as dt_time
-from dateutil import parser
+import requests, time, os, math
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from team import Team
 from image import build_image
@@ -8,7 +7,9 @@ from twitter import TwitterClient
 from sms import SMSClient
 # from db import DatabaseConnector
 from prediction import Prediction
+# from results import build_results
 from utils import headers
+import json
 
 twitter_client = TwitterClient()
 sms_client = SMSClient()

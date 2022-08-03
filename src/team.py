@@ -13,6 +13,7 @@ class Team:
     premier_league_shorthand = {
         "Arsenal": "ARS",
         "Aston Villa": "AVL",
+        "Brentford": "BRE",
         "Brighton": "BHA",
         "Burnley": "BUR",
         "Chelsea": "CHE",
@@ -25,9 +26,11 @@ class Team:
         "Manchester City": "MCI",
         "Manchester United": "MUN",
         "Newcastle": "NEW",
+        "Norwich": "NOR",
         "Sheffield Utd": "SHU",
         "Southampton": "SOU",
         "Tottenham": "TOT",
+        "Watford": "WAT",
         "West Brom": "WBA",
         "West Ham": "WHU",
         "Wolves": "WOL"

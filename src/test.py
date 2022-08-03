@@ -16,9 +16,9 @@ def sum_odds(home_odds, away_odds):
 
 def print_odds(odds):
     print("----------------------------------------")
-    print("Home Win: {}%".format(odds[0]))
-    print("Draw: {}%".format(odds[1]))
-    print("Away Win: {}%".format(odds[2]))
+    print("Home Win: {}%".format(odds[0] * 100))
+    print("Draw: {}%".format(odds[1] * 100))
+    print("Away Win: {}%".format(odds[2] * 100))
 
 home_odds = []
 away_odds = []
