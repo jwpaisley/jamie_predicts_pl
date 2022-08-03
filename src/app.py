@@ -97,7 +97,7 @@ def expected_value(mu):
         poisson_list.append(P)
     return (poisson_list.index(max(poisson_list)), poisson_list)
 
-today = "2022-8-5" # datetime.utcnow().strftime("%Y-%m-%d")
+today = datetime.utcnow().strftime("%Y-%m-%d")
 league_results = get_results_for_league(LEAGUE_ID_PREV)
 league_averages = get_league_averages(league_results)
 fixtures = get_fixtures_by_day(LEAGUE_ID, today)
